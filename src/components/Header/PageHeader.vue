@@ -1,16 +1,16 @@
 <template>
   <header class="page-header">
-    <img class="page-header__logo page-header__logo_lifehacker" src="../assets/header-logo-lifehacker.png" alt="Логотип Лайфхакер">
+    <img class="page-header__logo page-header__logo_lifehacker" src="../../assets/header-logo-lifehacker.png" alt="Логотип Лайфхакер">
     <picture >
-      <source media="(min-width: 1200px)" srcset="../assets/header-logo-hauwei-desktop.png">
-      <img class="page-header__logo_huawei" src="../assets/header-logo-huawei-mobile.png" alt="Логотип Huawei">
+      <source media="(min-width: 1280px)" srcset="../../assets/header-logo-hauwei-desktop.png">
+      <img class="page-header__logo_huawei" src="../../assets/header-logo-huawei-mobile.png" alt="Логотип Huawei">
     </picture>
     <share />
   </header>
 </template>
 
 <script>
-  import Share from './Share';
+  import Share from '../Share';
 
   export default {
     name: 'PageHeader',

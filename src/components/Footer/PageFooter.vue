@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import Share from './Share';
+  import Share from '../Share';
 
   export default {
     name: "PageFooter",
@@ -41,11 +41,9 @@
     letter-spacing: -0.2px;
     line-height: 24px;
     margin-top: 19px;
-    &:hover {
-      .page-footer__copyright_pink {
-        color: #db4696;
-      }
-    }
+  }
+  .page-footer__copyright_pink:hover {
+    color: #db4696;
   }
   .share {
     margin-top: 32px;
