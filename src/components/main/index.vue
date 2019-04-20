@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import TimeManagement from './TimeManagement';
-  import PresentationalProduct from './PresentationalProduct';
+  import TimeManagement from './time-management/index';
+  import PresentationalProduct from './presential-product/index';
 
   export default {
     name: "PageMain",
@@ -18,7 +18,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
   .page-main {
     width: 320px;
     background-color: white;

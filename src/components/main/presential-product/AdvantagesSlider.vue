@@ -10,14 +10,14 @@
       </button>
 
       <div class="slider__nav-wrapper">
-        <button class="slider__nav-toggle_circle" v-for='slide in sliderList' v-on:click='openSlide(slide.id)'></button>
+        <button class="slider__nav-toggle-dot" v-for='slide in sliderList' v-on:click='openSlide(slide.id)' :key="slide.id"></button>
       </div>
     </nav>
 
     <div class='slider__container'>
       <ul class="slider__list" v-bind:style='{left: sliderOffsetLeft + "px"}'>
-        <li class="slider__slide" v-for='slide in sliderList'>
-          <img class="slider__slide-image" :src="`${slide.img}`">
+        <li class="slider__slide" v-for='slide in sliderList' :key="slide.id">
+          <img class="slider__slide-image" :src="`${slide.img}`" alt="Изображение сладера">
           <div class="slider__slide-description" v-html="`${slide.text}`"></div>
         </li>
       </ul>
@@ -25,73 +25,11 @@
   </section>
 </template>
 
-<script>
-  export default {
-    name: 'Slider',
-    data () {
-      return {
-        // Всего слайдов
-        sliderAllCount: 0,
-        // Номер активного слайда
-        sliderActive: 1,
-        // Отступ тела со слайдами в контейнере
-        sliderOffsetLeft: 0,
-        // Шаг одного слайда = его длина
-        sliderOffsetStep: 0,
-        // Список изображений
-        sliderList: this.sliderList
-      }
-    },
-    props: [
-      'sliderList'
-    ],
-    methods: {
-      // Иницилизация слайдера
-      initSlider: function () {
-        let sliderBody = this.$el.querySelector('.slider__container');
-        let sliderSlidies = sliderBody.querySelectorAll('.slider__slide');
-        this.sliderOffsetStep = sliderBody.clientWidth;
-        this.sliderAllCount = sliderSlidies.length;
-      },
+<script src="../../Slider.js">
 
-      // Открыть слайд по номеру
-      openSlide: function (id) {
-        if (id > 0 && id <= this.sliderAllCount) {
-          this.sliderActive = id;
-          this.sliderOffsetLeft = -(this.sliderActive * this.sliderOffsetStep - this.sliderOffsetStep)
-        }
-      },
-
-      // Следующий слайд
-      nextSlide: function () {
-        if (this.sliderActive < this.sliderAllCount) {
-          this.sliderActive += 1;
-          this.openSlide(this.sliderActive);
-        }
-      },
-
-      // Предыдущий слайд
-      prevSlide: function () {
-        if (this.sliderActive > 1) {
-          this.sliderActive -= 1;
-          this.openSlide(this.sliderActive);
-        }
-      }
-    },
-
-    mounted () {
-      this.initSlider();
-      // Перенастройка слайдера при изменении размера окна
-      window.addEventListener('resize', () => {
-        this.initSlider();
-        this.openSlide(this.sliderActive);
-      })
-    }
-  };
 </script>
 
 <style lang="scss" scoped>
-
   .slider {
     position: relative;
     width: 320px;
@@ -100,8 +38,8 @@
   }
   .slider__nav-wrapper {
     position: absolute;
-    bottom: 10px;
-    left: 100px;
+    bottom: 48px;
+    left: 80px;
   }
   .slider__nav-toggle {
     z-index: 1;
@@ -117,20 +55,30 @@
       top: 55px;
       right: 30px;
     }
-    &_circle {
-      margin: 0;
-      padding: 0;
-      z-index: 1;
-      cursor: pointer;
+  }
+  .slider__nav-toggle-dot {
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #db4696;
+    margin-right: 15px;
+
+    &:hover {
+      background-color: #ffffff;
+    }
+    &_active {
       background: none;
-      border: none;
-      outline: none;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: #db4696;
+      border: 1px solid #db4696;
+      z-index: 2;
       &:hover {
-        background-color: #ffffff;
+        background: none;
       }
     }
   }
@@ -195,7 +143,7 @@
     .slider__slide {
       flex-direction: row;
       align-items: center;
-      margin: 80px 115px;
+      margin: 80px 115px 0 115px;
     }
     .slider__slide-description {
       width: 440px;
@@ -212,6 +160,10 @@
         top: 115px;
         right: 30px;
       }
+    }
+    .slider__nav-wrapper {
+      bottom: 44px;
+      left: 320px;
     }
   }
   @media (min-width: $desktop-width) {
@@ -232,6 +184,10 @@
       font-size: 18px;
       line-height: 26px;
       margin-left: 90px;
+    }
+    .slider__nav-wrapper {
+      bottom: 57px;
+      left: 560px;
     }
   }
 </style>

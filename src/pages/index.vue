@@ -7,9 +7,9 @@
 </template>
 
 <script>
-  import PageHeader from '../components/Header/PageHeader';
-  import PageMain from '../components/Main/PageMain';
-  import PageFooter from '../components/Footer/PageFooter';
+  import PageHeader from '../components/header/index';
+  import PageMain from '../components/main/index';
+  import PageFooter from '../components/footer/index';
 
     export default {
       name: "index",
