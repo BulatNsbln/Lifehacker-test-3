@@ -11,7 +11,6 @@ function Slider() {
         sliderOffsetLeft: 0,
         // Шаг одного слайда = его длина
         sliderOffsetStep: 0,
-        // Список изображений
       }
     },
     props: [

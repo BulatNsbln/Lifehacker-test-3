@@ -29,7 +29,7 @@
 <style lang="scss" scoped>
   .slider {
     position: relative;
-    /*width: 320px;*/
+
     width: 100%;
     min-width: 320px;
     height: 481px;
@@ -37,30 +37,32 @@
   .slider__nav-wrapper {
     position: absolute;
     bottom: 20px;
-    /*left: 115px;*/
     left: 36%;
+
     z-index: 5;
   }
   .slider__nav-toggle-dot {
+    width: 10px;
+    height: 10px;
     margin: 0;
+    margin-right: 15px;
     padding: 0;
+
     z-index: 2;
     cursor: pointer;
     background: none;
     border: none;
     outline: none;
-    width: 10px;
-    height: 10px;
     border-radius: 50%;
-    background-color: #db4696;
-    margin-right: 15px;
+    background-color: $color-pink-near;
 
     &:hover {
-      background-color: #ffffff;
+      background-color: $color-white;
     }
+
     &_active {
       background: none;
-      border: 1px solid #db4696;
+      border: 1px solid $color-pink-near;
       z-index: 2;
 
       &:hover {
@@ -69,42 +71,47 @@
     }
   }
   .slider__list {
+    position: relative;
+
+    display: flex;
+
     width: 400%;
     padding: 0;
     margin: 0;
-    display: flex;
-    position: relative;
+
     transition: all .5s ease;
   }
   .slider__container {
-    /*width: 320px;*/
     width: 100%;
     min-width: 320px;
+
     overflow: hidden;
   }
   .slider__slide {
-    list-style: none;
     width: 100%;
+
+    list-style: none;
   }
   .slider__slide-container {
-    /*width: 320px;*/
-    min-width: 320px;
-    width: 100%;
-    height: 481px;
-    background-size: cover;
     position: relative;
+
+    width: 100%;
+    min-width: 320px;
+    height: 481px;
+
+    background-size: cover;
     background-position-x: -45px;
     filter: grayscale(100%);
   }
   .slider__slide-quote {
     position: absolute;
+    bottom: 150px;
+
     margin: 0;
     padding: 0;
-    bottom: 150px;
-    /*margin-left: 30px;*/
     margin-left: 9%;
-    color: #ffffff;
-    font-family: "Oswald";
+
+    color: $color-white;
     font-size: 32px;
     font-weight: 500;
     line-height: 40px;
@@ -112,14 +119,15 @@
   }
   .slider__slide-name {
     position: absolute;
-    margin: 0;
-    padding: 0;
     bottom: 120px;
-    /*margin-left: 30px;*/
-    margin-left: 9%;
+
     width: 164px;
     height: 19px;
-    color: #ffffff;
+    margin: 0;
+    margin-left: 9%;
+    padding: 0;
+
+    color: $color-white;
     font-family: Arial;
     font-size: 16px;
     font-weight: 700;
@@ -127,12 +135,13 @@
   .slider__slide-description {
     position: absolute;
     bottom: 57px;
+
     width: 317px;
     height: 33px;
     margin-top: 10px;
-    /*margin-left: 30px;*/
     margin-left: 9%;
-    color: #ffffff;
+
+    color: $color-white;
     font-family: Arial;
     font-size: 14px;
   }
@@ -148,43 +157,40 @@
   }
   @media (min-width: $tablet-width) {
     .slider {
-      /*width: $tablet-width;*/
       width: 100%;
       height: 431px;
     }
     .slider__nav-wrapper {
       position: absolute;
       bottom: 23px;
-      /*left: 359px;*/
       left: 45%;
     }
     .slider__container {
-      /*width: $tablet-width;*/
       width: 100%;
     }
     .slider__slide-container {
-      /*width: $tablet-width;*/
       width: 100%;
       height: 431px;
+
       background-position-x: 0;
     }
     .slider__slide-quote {
       position: absolute;
-      /*margin-left: 485px;*/
-      margin-left: 61%;
       bottom: 225px;
+
+      margin-left: 61%;
     }
     .slider__slide-name {
       position: absolute;
-      /*margin-left: 485px;*/
-      margin-left: 61%;
       bottom: 175px;
+
+      margin-left: 61%;
     }
     .slider__slide-description {
       position: absolute;
-      /*margin-left: 485px;*/
-      margin-left: 61%;
       bottom: 115px;
+
+      margin-left: 61%;
     }
   }
   @media (min-width: 950px) {
@@ -192,7 +198,7 @@
       left: 50%;
     }
   }
-  @media only screen and (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     .slider {
       display: none;
     }

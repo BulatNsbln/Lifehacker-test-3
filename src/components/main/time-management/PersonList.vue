@@ -23,13 +23,16 @@
   .people-list {
     display: none;
   }
-  @media only screen and (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     .people-list {
       display: grid;
-      list-style: none;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
       margin: 0;
       padding: 0;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      list-style: none;
+      cursor: pointer;
     }
     .people-item {
       margin: 0;
@@ -40,28 +43,34 @@
     }
     .people-item__wrapper {
       position: relative;
-      height: 525px;
-      background-size: cover;
-      background-position-x: -20px;
+
       display: flex;
       align-items: flex-end;
       justify-content: center;
+
+      height: 525px;
+
+      background-size: cover;
+      background-position-x: -20px;
       filter: grayscale(100%);
+
       &:hover {
         background-position-x: -40px;
         filter: grayscale(0);
         background-size: 786px 580px;
+
         .people-item__quote {
-          color: #ffffff;
-          font-family: "Oswald";
+          position: absolute;
+          left: 300px;
+          bottom: 270px;
+
+          display: inline-block;
+
+          color: $color-white;
           font-size: 36px;
           font-weight: 500;
           line-height: 42px;
           text-transform: uppercase;
-          display: inline-block;
-          position: absolute;
-          left: 300px;
-          bottom: 270px;
         }
         .people-item__name {
           position: absolute;
@@ -69,13 +78,16 @@
           top: 256px;
         }
         .people-item__description {
-          display: inline-block;
           position: absolute;
           left: 300px;
           top: 286px;
+
+          display: inline-block;
+
           width: 317px;
           height: 33px;
-          color: #ffffff;
+
+          color: $color-white;
           font-family: Arial;
           font-size: 14px;
         }
@@ -85,7 +97,8 @@
       margin: 0;
       padding: 0;
       margin-bottom: 44px;
-      color: #ffffff;
+
+      color: $color-white;
       font-family: Arial;
       font-size: 16px;
       font-weight: 700;

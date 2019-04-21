@@ -22,53 +22,55 @@
 
 <style lang="scss" scoped>
   .page-footer {
-    /*width: 320px;*/
     min-width: 320px;
     height: 137px;
     margin: 0 auto;
+
     background-color: #424242;
   }
   .page-footer__wrapper {
     display: flex;
     flex-direction: column-reverse;
+
     width: 212px;
     margin: 0 auto;
   }
   .page-footer__copyright {
-    color: #ffffff;
-    font-family: Oswald;
+    margin-top: 19px;
+
+    color: $color-white;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: -0.2px;
     line-height: 24px;
-    margin-top: 19px;
     &_pink {
       cursor: pointer;
     }
   }
   .page-footer__copyright_pink:hover {
-    color: #db4696;
+    color: $color-pink-near;
   }
   .share {
-    margin-top: 32px;
-    margin-bottom: 19px;
     width: 212px;
     height: 35px;
+
+    margin-top: 32px;
+    margin-bottom: 19px;
   }
   .page-footer__copyright {
     margin: 0 auto;
   }
   @media (min-width: $tablet-width) {
     .page-footer {
-      /*width: 800px;*/
       width: 100%;
       height: 103px;
     }
     .page-footer__wrapper {
-      width: 100%;
-      height: 100%;
       flex-direction: row;
       justify-content: space-between;
+
+      width: 100%;
+      height: 100%;
     }
     .share {
       width: 160px;

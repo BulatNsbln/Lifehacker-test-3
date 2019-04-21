@@ -59,7 +59,7 @@
 
 <style lang="scss" scoped>
   .share__title {
-    color: #ffffff;
+    color: $color-white;
     font-family: Oswald;
     font-size: 12px;
     font-weight: 400;
@@ -68,17 +68,18 @@
   }
   .share__social-list {
     display: none;
+
     list-style: none;
   }
   .share {
-    background: none;
     height: 35px;
+
+    background: none;
     border-radius: 2px;
-    border: 1px solid #ffffff;
+    border: 1px solid $color-white;
     cursor: pointer;
     &:hover {
-      border-color: #db4696;
-
+      border-color: $color-pink-near;
       .share__title {
         display: none;
       }
@@ -96,9 +97,9 @@
     margin: 5px auto;
   }
   .share__social-icon {
-    fill: #fff;
+    fill: $color-white;
     &:hover {
-      fill: #db4696;
+      fill: $color-pink-near;
     }
   }
 </style>

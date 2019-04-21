@@ -26,18 +26,17 @@
 <style lang="scss" scoped>
   .page-header {
     display: flex;
-    /*width: 320px;*/
-    min-width: 320px;
+    justify-content: center;
+
     width: 100%;
     height: 40px;
-    /*margin: 0 auto;*/
+    min-width: 320px;
+
     background-color: #752e74;
-    justify-content: center;
   }
   .page-header__logo_huawei {
     width: 92px;
     height: 20px;
-    /*margin: 10px 114px;*/
     margin-top: 10px;
   }
   .page-header__logo_lifehacker {
@@ -48,6 +47,7 @@
   }
   .share {
     display: none;
+
     width: 160px;
     margin: 18px 0 16px 304px;
   }
@@ -56,9 +56,8 @@
   }
   @media (min-width: $tablet-width) {
     .page-header {
-      /*width: 800px;*/
-      min-width: 800px;
       width: 100%;
+      min-width: 800px;
     }
   }
   @media (min-width: $desktop-width) {
@@ -66,9 +65,10 @@
       display: inline-block;
     }
     .page-header {
+      display: flex;
+
       width: 1280px;
       height: 70px  ;
-      display: flex;
       margin: 0 auto;
     }
     .page-header__logo_huawei {
@@ -78,6 +78,7 @@
     }
     .page-header__logo_lifehacker {
       display: inline-block;
+
       margin: 15px 0 26px 10px;
     }
   }

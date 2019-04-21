@@ -74,17 +74,19 @@
 
 <style lang="scss" scoped>
   .time-management__description{
-    height: 190px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
+
+    height: 190px;
+    display: flex;
   }
   .time-management__description-title {
-    margin: 0 auto 0 auto;
-    padding: 0 0 10px 0;
     width: 221px;
     height: 44px;
-    color: #000000;
+    margin: 0 auto 0 auto;
+    padding: 0 0 10px 0;
+
+    color: $color-black;
     font-family: Arial;
     font-size: 18px;
     font-weight: 700;
@@ -92,11 +94,11 @@
     text-transform: uppercase;;
   }
   .time-management__description-text {
-    margin: 0 auto;
-    /*width: 267px;*/
     width: 83%;
     height: 80px;
-    color: #000000;
+    margin: 0 auto;
+
+    color: $color-black;
     font-family: Arial;
     font-size: 16px;
     line-height: 20px;
@@ -110,11 +112,10 @@
       padding: 30px 0 10px 0;
     }
     .time-management__description-text {
-      /*width: 459px;*/
       width: 57%;
     }
   }
-  @media only screen and (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     .time-management__description {
       height: 175px;
     }

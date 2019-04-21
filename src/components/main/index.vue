@@ -20,19 +20,16 @@
 
 <style lang="scss">
   .page-main {
-    /*width: 320px;*/
     min-width: 320px;
-    background-color: white;
-    /*margin: 0 auto;*/
+    background-color: $color-white;
   }
-  @media only screen and (min-width: $tablet-width) {
-    .page-main{
-      /*width: $tablet-width;*/
+  @media (min-width: $tablet-width) {
+    .page-main {
       width: 100%;
     }
   }
-  @media only screen and (min-width: $desktop-width) {
-    .page-main{
+  @media (min-width: $desktop-width) {
+    .page-main {
       width: $desktop-width;
       margin: 0 auto;
     }

@@ -33,26 +33,29 @@
 <style lang="scss" scoped>
   .slider {
     position: relative;
-    /*width: 320px;*/
-    min-width: 320px;
-    width: 100%;
-    height: 528px;
-    background-color: #111111;
+
     display: flex;
     justify-content: center;
+
+    width: 100%;
+    height: 528px;
+    min-width: 320px;
+
+    background-color: #111111;
   }
   .slider__nav-wrapper {
     position: absolute;
     bottom: 48px;
-    /*left: 80px;*/
     left: 25%;
   }
   .slider__nav-toggle {
+    position: absolute;
+
     z-index: 1;
     background: none;
     border: none;
     outline: none;
-    position: absolute;
+
     &_prev {
       top: 70px;
       left: 30px;
@@ -63,25 +66,27 @@
     }
   }
   .slider__nav-toggle-dot {
+    width: 10px;
+    height: 10px;
+
     margin: 0;
     padding: 0;
+
     z-index: 2;
     cursor: pointer;
     background: none;
     border: none;
     outline: none;
-    width: 10px;
-    height: 10px;
     border-radius: 50%;
-    background-color: #db4696;
+    background-color: $color-pink-near;
     margin-right: 15px;
 
     &:hover {
-      background-color: #ffffff;
+      background-color: $color-white;
     }
     &_active {
       background: none;
-      border: 1px solid #db4696;
+      border: 1px solid $color-pink-near;
       z-index: 2;
       &:hover {
         background: none;
@@ -91,57 +96,61 @@
   .slider__nav-toggle_image {
     width: 26px;
     height: 60px;
+
     cursor: pointer;
-    fill: #db4696;
+    fill: $color-pink-near;
     &:hover {
-      fill: #ffffff;
+      fill: $color-white;
     }
   }
   .slider__nav-toggle_image-next {
     transform: rotate(180deg);
   }
   .slider__list {
+    position: relative;
+
+    display: flex;
+
     width: 700%;
     padding: 0;
     margin: 0;
-    display: flex;
-    position: relative;
+
     transition: all .5s ease;
   }
   .slider__slide {
     display: flex;
     flex-direction: column;
-    /*margin: 0 26.5px;*/
+
     width: 100%;
     margin-top: 44px;
   }
   .slider__slide-image {
+    display: block;
+
     width: 61px;
     height: 103px;
-    display: block;
     margin: 0 auto;
     margin-bottom: 40px;
   }
   .slider__slide-text {
-    /*width: 267px;*/
-    min-width: 267px;
     width: 83%;
-
+    min-width: 267px;
     height: 264px;
-    color: #ffffff;
+    margin: 0 auto;
+
+    color: $color-white;
     font-family: Arial;
     font-size: 16px;
     line-height: 22px;
-    margin: 0 auto;
     text-align: center;
   }
   .slider__list {
     display: flex;
   }
   .slider__container {
-    /*width: 320px;*/
-    min-width: 320px;
     width: 100%;
+    min-width: 320px;
+
     overflow: hidden;
   }
   @media (min-width: 480px) {
@@ -149,27 +158,25 @@
       left: 40%;
     }
   }
-  @media only screen and (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     .slider {
-      /*width: $tablet-width;*/
       width: 100%;
       height: 311px;
     }
     .slider__container {
-      /*width: $tablet-width;*/
       width: 100%;
     }
     .slider__slide {
       flex-direction: row;
       align-items: center;
-      /*margin: 80px 115px 0 115px;*/
+
       margin: 80px 115px 0 115px;
     }
     .slider__slide-text {
-      /*width: 440px;*/
       width: 80%;
       height: 154px;
       margin-left: 70px;
+
       text-align: left;
     }
     .slider__nav-toggle {
@@ -184,11 +191,10 @@
     }
     .slider__nav-wrapper {
       bottom: 44px;
-      /*left: 320px;*/
       left: 40%;
     }
   }
-  @media only screen and (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     .slider {
       width: 1280px;
       height: 341px;
