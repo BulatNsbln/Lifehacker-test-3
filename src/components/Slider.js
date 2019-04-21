@@ -17,7 +17,7 @@ function Slider() {
 
     props: {
       'sliderList': {
-        type: Object,
+        type: Array,
         required: true
       }
     },

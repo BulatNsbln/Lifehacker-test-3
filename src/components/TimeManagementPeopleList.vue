@@ -30,7 +30,7 @@
 
     props: {
       'peopleList': {
-        type: Object,
+        type: Array,
         required: true
       }
     }
