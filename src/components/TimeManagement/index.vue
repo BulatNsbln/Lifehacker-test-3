@@ -20,12 +20,12 @@
 </template>
 
 <script>
-  import PersonSlider from './PersonSlider';
-  import PeopleList from './PersonList';
-  import img_1 from '../../../assets/people_1-active.jpg';
-  import img_2 from '../../../assets/people_2-active.jpg';
-  import img_3 from '../../../assets/people_3-active.jpg';
-  import img_4 from '../../../assets/people_4-active.jpg';
+  import PersonSlider from './PeopleSlider';
+  import PeopleList from './PeopleList';
+  import img_1 from '../../assets/people_1-active.jpg';
+  import img_2 from '../../assets/people_2-active.jpg';
+  import img_3 from '../../assets/people_3-active.jpg';
+  import img_4 from '../../assets/people_4-active.jpg';
 
 
 

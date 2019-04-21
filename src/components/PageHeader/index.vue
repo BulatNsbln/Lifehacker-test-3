@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import Share from '../Share';
+  import Share from '../BaseShare';
 
   export default {
     name: 'PageHeader',

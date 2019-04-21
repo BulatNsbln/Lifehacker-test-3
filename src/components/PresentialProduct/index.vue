@@ -1,10 +1,10 @@
 <template>
-  <article class="presentational-product" refs="head">
+  <article class="presentational-product">
     <header class="presentational-product__header">
       <picture class="presentational-product__photo">
-        <source media="(min-width: 1280px)" srcset="../../../assets/tablet-photo-desktop.png">
-        <source media="(min-width: 800px)" srcset="../../../assets/tablet-photo-tablet.png">
-        <img src="../../../assets/tablet-photo-mobile.png" alt="Фотография планшета">
+        <source media="(min-width: 1280px)" srcset="../../assets/tablet-photo-desktop.png">
+        <source media="(min-width: 800px)" srcset="../../assets/tablet-photo-tablet.png">
+        <img src="../../assets/tablet-photo-mobile.png" alt="Фотография планшета">
       </picture>
       <div class="presentational-product__header-wrapper">
         <svg class="presentational-product__header-title" viewBox="0 0 212 82">
@@ -37,13 +37,13 @@
 <script>
   import AdvantagesSlider from './AdvantagesSlider';
 
-  import advantage_0 from '../../../assets/advantage_0.png';
-  import advantage_1 from '../../../assets/advantage_1.png';
-  import advantage_2 from '../../../assets/advantage_2.png';
-  import advantage_3 from '../../../assets/advantage_3.png';
-  import advantage_4 from '../../../assets/advantage_4.png';
-  import advantage_5 from '../../../assets/advantage_5.png';
-  import advantage_6 from '../../../assets/advantage_6.png';
+  import advantage_0 from '../../assets/advantage_0.png';
+  import advantage_1 from '../../assets/advantage_1.png';
+  import advantage_2 from '../../assets/advantage_2.png';
+  import advantage_3 from '../../assets/advantage_3.png';
+  import advantage_4 from '../../assets/advantage_4.png';
+  import advantage_5 from '../../assets/advantage_5.png';
+  import advantage_6 from '../../assets/advantage_6.png';
 
   export default {
     name: 'PresentationalProduct',

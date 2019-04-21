@@ -1,23 +1,68 @@
 <template>
   <section class="slider">
     <nav class="slider__nav">
-      <button type="button" class="slider__nav-toggle slider__nav-toggle_prev" v-on:click='prevSlide'>
-        <svg class="slider__nav-toggle_image slider__nav-toggle_image-prev"  viewBox="0 0 26 46"><defs><path id="st66a" d="M541 211a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-27v27a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-30a1 1 0 0 1 1-1z"/></defs><g><g transform="rotate(-45 18.25 732.175)"><use  xlink:href="#st66a"/></g></g></svg>
+      <button
+        type="button"
+        class="slider__nav-toggle slider__nav-toggle_prev"
+        v-on:click='prevSlide'
+      >
+        <svg class="slider__nav-toggle_image slider__nav-toggle_image-prev"  viewBox="0 0 26 46">
+          <defs>
+            <path id="st66a" d="M541 211a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-27v27a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-30a1 1 0 0 1 1-1z"/>
+          </defs>
+          <g>
+            <g transform="rotate(-45 18.25 732.175)">
+              <use  xlink:href="#st66a"/>
+            </g>
+          </g>
+        </svg>
       </button>
-      <button type="button" class="slider__nav-toggle slider__nav-toggle_next" v-on:click='nextSlide'>
-        <svg class="slider__nav-toggle_image slider__nav-toggle_image-next"  viewBox="0 0 26 46"><defs><path id="st66a" d="M541 211a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-27v27a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-30a1 1 0 0 1 1-1z"/></defs><g><g transform="rotate(-45 18.25 732.175)"><use xlink:href="#st66a"/></g></g></svg>
+      <button
+        type="button"
+        class="slider__nav-toggle slider__nav-toggle_next"
+        v-on:click='nextSlide'
+      >
+        <svg class="slider__nav-toggle_image slider__nav-toggle_image-next"  viewBox="0 0 26 46">
+          <defs>
+            <path id="st66a" d="M541 211a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-27v27a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-30a1 1 0 0 1 1-1z"/>
+          </defs>
+          <g>
+            <g transform="rotate(-45 18.25 732.175)">
+              <use xlink:href="#st66a"/>
+            </g>
+          </g>
+        </svg>
       </button>
 
       <div class="slider__nav-wrapper">
-        <button class="slider__nav-toggle-dot" v-for='slide in sliderList' v-on:click='openSlide(slide.id)' :key="slide.id"></button>
+        <button
+          class="slider__nav-toggle-dot"
+          v-for='slide in sliderList'
+          v-on:click='openSlide(slide.id)'
+          :key="slide.id"
+        ></button>
       </div>
     </nav>
 
     <div class='slider__container'>
-      <ul class="slider__list" v-bind:style='{left: sliderOffsetLeft + "px"}'>
-        <li class="slider__slide" v-for='slide in sliderList' :key="slide.id">
-          <img class="slider__slide-image" :src="`${slide.img}`" alt="Изображение сладера">
-          <div class="slider__slide-text" v-html="`${slide.text}`"></div>
+      <ul
+        class="slider__list"
+        v-bind:style='{left: sliderOffsetLeft + "px"}'
+      >
+        <li
+          class="slider__slide"
+          v-for='slide in sliderList'
+          :key="slide.id"
+        >
+          <img
+            class="slider__slide-image"
+            :src="`${slide.img}`"
+            alt="Изображение сладера"
+          >
+          <div
+            class="slider__slide-text"
+            v-html="`${slide.text}`"
+          ></div>
         </li>
       </ul>
     </div>
@@ -25,7 +70,7 @@
 </template>
 
 <script>
-  import Slider from '../../Slider';
+  import Slider from '../Slider';
 
   export default new Slider();
 </script>

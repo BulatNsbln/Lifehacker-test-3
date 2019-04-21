@@ -1,6 +1,6 @@
 function Slider() {
   return {
-    name: 'Slider',
+    name: 'SliderItem',
     data () {
       return {
         // Всего слайдов
@@ -13,9 +13,12 @@ function Slider() {
         sliderOffsetStep: 0,
       }
     },
-    props: [
-      'sliderList'
-    ],
+    props: {
+      'sliderList': {
+        type: Object,
+        required: true
+      }
+    },
     methods: {
       // Иницилизация слайдера
       initSlider: function () {

@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import TimeManagement from './time-management/index';
-  import PresentationalProduct from './presential-product/index';
+  import TimeManagement from '../TimeManagement/index';
+  import PresentationalProduct from '../PresentialProduct/index';
 
   export default {
     name: "PageMain",
