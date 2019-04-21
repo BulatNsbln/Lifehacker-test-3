@@ -8,17 +8,18 @@
       <source media="(min-width: 1280px)" srcset="../../assets/header-logo-hauwei-desktop.png">
       <img class="page-header__logo_huawei" src="../../assets/header-logo-huawei-mobile.png" alt="Логотип Huawei">
     </picture>
-    <Share />
+    <base-share />
   </header>
 </template>
 
 <script>
-  import Share from '../Share';
+  import BaseShare from '../BaseShare';
 
   export default {
-    name: 'PageHeader',
+    name: 'TheHeader',
+
     components: {
-      Share
+      BaseShare
     }
   };
 </script>

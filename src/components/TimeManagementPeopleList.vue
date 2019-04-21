@@ -1,10 +1,24 @@
 <template>
   <ul class="people-list">
-    <li class="people-item" v-for="people in peopleList">
-      <div class="people-item__wrapper" v-bind:style='"background-image: url(" + people.img + ")"' :key="people.id">
-        <h1 class="people-item__quote" v-html="people.quote" ></h1>
-        <h5 class="people-item__name">{{people.peopleName}}</h5>
-        <p class="people-item__description">{{people.description}}</p>
+    <li
+      class="people-item"
+      v-for="people in peopleList"
+      :key="people.id"
+    >
+      <div
+        class="people-item__wrapper"
+        v-bind:style='"background-image: url(" + people.img + ")"'
+      >
+        <h1
+          class="people-item__quote"
+          v-html="people.quote"
+        ></h1>
+        <h5 class="people-item__name">
+          {{people.peopleName}}
+        </h5>
+        <p class="people-item__description">
+          {{people.description}}
+        </p>
       </div>
     </li>
   </ul>
@@ -13,9 +27,13 @@
 <script>
   export default {
     name: 'PeopleList',
-    props: [
-      'peopleList'
-    ]
+
+    props: {
+      'peopleList': {
+        type: Object,
+        required: true
+      }
+    }
   };
 </script>
 

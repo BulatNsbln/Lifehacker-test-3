@@ -4,18 +4,19 @@
       <p class="page-footer__copyright">
         <a class="page-footer__copyright_pink">Лайфхакер</a> | <a class="page-footer__copyright_pink">Huawei</a> © 2018
       </p>
-      <Share />
+      <base-share />
     </div>
   </footer>
 </template>
 
 <script>
-  import Share from '../Share';
+  import BaseShare from '../BaseShare';
 
   export default {
-    name: "PageFooter",
+    name: "TheFooter",
+
     components: {
-      Share
+      BaseShare
     }
   }
 </script>

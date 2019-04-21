@@ -48,12 +48,11 @@
       </li>
     </ul>
   </button>
-
 </template>
 
 <script>
     export default {
-        name: "Share"
+        name: "BaseShare"
     }
 </script>
 

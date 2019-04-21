@@ -1,10 +1,10 @@
 <template>
   <article class="time-management">
     <section class="time-management__person-list">
-      <PersonSlider
+      <person-slider
         :sliderList="personList"
       />
-      <PeopleList
+      <people-list
         :peopleList="personList"
       />
     </section>
@@ -20,51 +20,53 @@
 </template>
 
 <script>
-  import PersonSlider from './PersonSlider';
-  import PeopleList from './PersonList';
-  import img_1 from '../../../assets/people_1-active.jpg';
-  import img_2 from '../../../assets/people_2-active.jpg';
-  import img_3 from '../../../assets/people_3-active.jpg';
-  import img_4 from '../../../assets/people_4-active.jpg';
+  import PersonSlider from './TimeManagementSlider';
+  import PeopleList from './TimeManagementPeopleList';
+  import img_1 from '../assets/people_1-active.jpg';
+  import img_2 from '../assets/people_2-active.jpg';
+  import img_3 from '../assets/people_3-active.jpg';
+  import img_4 from '../assets/people_4-active.jpg';
 
-
+  const peoples = [
+    {
+      id: 1,
+      img: img_1,
+      quote: 'Мой офис — <br/> это моя голова',
+      peopleName: 'Лариса Онуфриенко',
+      description: 'основатель, организатор и координатор в ASTRA MUSIC event agency'
+    },
+    {
+      id: 2,
+      img: img_4,
+      quote: 'У меня не бывает <br/> обычных дней',
+      peopleName: 'Саша Москалец',
+      description: 'Стилист, музыкант, модель'
+    },
+    {
+      id: 3,
+      img: img_3,
+      quote: 'Работа комментатора <br/>  — это не только <br/> рассказ о спорте',
+      peopleName: 'Павел Занозин',
+      description: 'Комментатор, ведущий'
+    },
+    {
+      id: 4,
+      img: img_2,
+      quote: 'Музыка для меня — <br/> религия',
+      peopleName: 'Никита Забелин',
+      description: 'Диджей, основатель проекта Resonance'
+    }
+  ];
 
   export default {
     name: 'TimeManagement',
+
     data() {
       return {
-        personList: [
-          {
-            id: 1,
-            img: img_1,
-            quote: 'Мой офис — <br/> это моя голова',
-            peopleName: 'Лариса Онуфриенко',
-            description: 'основатель, организатор и координатор в ASTRA MUSIC event agency'
-          },
-          {
-            id: 2,
-            img: img_4,
-            quote: 'У меня не бывает <br/> обычных дней',
-            peopleName: 'Саша Москалец',
-            description: 'Стилист, музыкант, модель'
-          },
-          {
-            id: 3,
-            img: img_3,
-            quote: 'Работа комментатора <br/>  — это не только <br/> рассказ о спорте',
-            peopleName: 'Павел Занозин',
-            description: 'Комментатор, ведущий'
-          },
-          {
-            id: 4,
-            img: img_2,
-            quote: 'Музыка для меня — <br/> религия',
-            peopleName: 'Никита Забелин',
-            description: 'Диджей, основатель проекта Resonance'
-          }
-        ]
+        personList: peoples
       }
     },
+
     components: {
       PeopleList,
       PersonSlider

@@ -1,10 +1,10 @@
 <template>
-  <article class="presentational-product" refs="head">
+  <article class="presentational-product">
     <header class="presentational-product__header">
       <picture class="presentational-product__photo">
-        <source media="(min-width: 1280px)" srcset="../../../assets/tablet-photo-desktop.png">
-        <source media="(min-width: 800px)" srcset="../../../assets/tablet-photo-tablet.png">
-        <img src="../../../assets/tablet-photo-mobile.png" alt="Фотография планшета">
+        <source media="(min-width: 1280px)" srcset="../assets/tablet-photo-desktop.png">
+        <source media="(min-width: 800px)" srcset="../assets/tablet-photo-tablet.png">
+        <img src="../assets/tablet-photo-mobile.png" alt="Фотография планшета">
       </picture>
       <div class="presentational-product__header-wrapper">
         <svg class="presentational-product__header-title" viewBox="0 0 212 82">
@@ -28,81 +28,90 @@
         </button>
       </div>
     </header>
-    <AdvantagesSlider
+    <advantages-slider
       :sliderList="advantageList"
     />
   </article>
-
 </template>
-<script>
-  import AdvantagesSlider from './AdvantagesSlider';
 
-  import advantage_0 from '../../../assets/advantage_0.png';
-  import advantage_1 from '../../../assets/advantage_1.png';
-  import advantage_2 from '../../../assets/advantage_2.png';
-  import advantage_3 from '../../../assets/advantage_3.png';
-  import advantage_4 from '../../../assets/advantage_4.png';
-  import advantage_5 from '../../../assets/advantage_5.png';
-  import advantage_6 from '../../../assets/advantage_6.png';
+<script>
+  import AdvantagesSlider from './PresentationalProductSlider';
+
+  import advantage_0 from '../assets/advantage_0.png';
+  import advantage_1 from '../assets/advantage_1.png';
+  import advantage_2 from '../assets/advantage_2.png';
+  import advantage_3 from '../assets/advantage_3.png';
+  import advantage_4 from '../assets/advantage_4.png';
+  import advantage_5 from '../assets/advantage_5.png';
+  import advantage_6 from '../assets/advantage_6.png';
+
+  const advantages = [
+    {
+      id: 1,
+      img: advantage_0,
+      text: 'Защищённый изогнутым стеклом 2К-дисплей с диагональю 8,4 или 10,8 дюйма  поражает детализацией картинки. ' +
+        'Технология ClariVu 5.0 расширяет динамический диапазон, увеличивая контрастность и насыщенность, а режим Eye Comfort ' +
+        'снижает усталость глаз при использовании планшета вечером и ночью.'
+    },
+
+    {
+      id: 2,
+      img: advantage_1,
+      text: 'Восьмиядерный процессор Kirin 960 в связке с 4 ГБ оперативной памяти обеспечивает безупречную производительность ' +
+        'как для рабочих задач, так и в играх. А внутренняя память объёмом 32 или 64 ГБ вмещает все необходимые документы, файлы ' +
+        'и медиаконтент.'
+    },
+
+    {
+      id: 3,
+      img: advantage_2,
+      text: 'Защищённый изогнутым стеклом 2К-дисплей с диагональю 8,4 или 10,8 дюйма  поражает детализацией картинки. Т' +
+        'ехнология ClariVu 5.0 расширяет динамический диапазон, увеличивая контрастность и насыщенность, а ' +
+        'режим Eye Comfort снижает усталость глаз при использовании планшета вечером и ночью.'
+    },
+
+    {
+      id: 4,
+      img: advantage_3,
+      text: 'Благодаря ёмким аккумуляторам на 5 100 мА·ч в восьмидюймовой и 7 500 мА·ч в десятидюймовой версиях планшета ' +
+        'обеспечивается высокая автономность даже при активном использовании. Все модели поддерживают технологию Huawei Quick' +
+        ' Charge и полностью заряжаются всего за пару часов.'
+
+    },
+
+    {
+      id: 5,
+      img: advantage_4,
+      text: 'Основная камера планшета оснащена 13-мегапиксельным сенсором и способна снимать качественные фото и видео. ' +
+        'Фронтальная 8-мегапиксельная камера подходит как для селфи, так и для проведения видеоконференций.'
+    },
+
+    {
+      id: 6,
+      img: advantage_5,
+      text: 'В 10-дюймовой модели MediaPad M5 предусмотрен разъём Pogo Pins для подключения внешней клавиатуры. ' +
+        'А Pro-версия планшета поставляется вместе с распознающим 4 096 степеней нажатия стилусом M-Pen, ' +
+        'дополнительно оснащённым кнопками быстрого доступа для снятия скриншотов, удаления изображений и других действий.'
+
+    },
+
+    {
+      id: 7,
+      img: advantage_6,
+      text: 'Оболочка EMUI 8.0 с продуманным интерфейсом обеспечивает удобство и высокую скорость работы. ' +
+        'На 10-дюймовой версии планшета в режиме десктопа работа упрощается ещё больше за счёт удобной навигации ' +
+        'и панели задач как на компьютере.'
+    }
+  ];
 
   export default {
     name: 'PresentationalProduct',
     data: function () {
       return {
-        advantageList: [
-          {
-            id: 1,
-            img: advantage_0,
-            text: 'Защищённый изогнутым стеклом 2К-дисплей с диагональю 8,4 или 10,8 дюйма  поражает детализацией картинки. ' +
-              'Технология ClariVu 5.0 расширяет динамический диапазон, увеличивая контрастность и насыщенность, а режим Eye Comfort ' +
-              'снижает усталость глаз при использовании планшета вечером и ночью.'
-          },
-          {
-            id: 2,
-            img: advantage_1,
-            text: 'Восьмиядерный процессор Kirin 960 в связке с 4 ГБ оперативной памяти обеспечивает безупречную производительность ' +
-              'как для рабочих задач, так и в играх. А внутренняя память объёмом 32 или 64 ГБ вмещает все необходимые документы, файлы ' +
-              'и медиаконтент.'
-          },
-          {
-            id: 3,
-            img: advantage_2,
-            text: 'Защищённый изогнутым стеклом 2К-дисплей с диагональю 8,4 или 10,8 дюйма  поражает детализацией картинки. Т' +
-              'ехнология ClariVu 5.0 расширяет динамический диапазон, увеличивая контрастность и насыщенность, а ' +
-              'режим Eye Comfort снижает усталость глаз при использовании планшета вечером и ночью.'
-          },
-          {
-            id: 4,
-            img: advantage_3,
-            text: 'Благодаря ёмким аккумуляторам на 5 100 мА·ч в восьмидюймовой и 7 500 мА·ч в десятидюймовой версиях планшета ' +
-              'обеспечивается высокая автономность даже при активном использовании. Все модели поддерживают технологию Huawei Quick' +
-              ' Charge и полностью заряжаются всего за пару часов.'
-
-          },
-          {
-            id: 5,
-            img: advantage_4,
-            text: 'Основная камера планшета оснащена 13-мегапиксельным сенсором и способна снимать качественные фото и видео. ' +
-              'Фронтальная 8-мегапиксельная камера подходит как для селфи, так и для проведения видеоконференций.'
-          },
-          {
-            id: 6,
-            img: advantage_5,
-            text: 'В 10-дюймовой модели MediaPad M5 предусмотрен разъём Pogo Pins для подключения внешней клавиатуры. ' +
-              'А Pro-версия планшета поставляется вместе с распознающим 4 096 степеней нажатия стилусом M-Pen, ' +
-              'дополнительно оснащённым кнопками быстрого доступа для снятия скриншотов, удаления изображений и других действий.'
-
-          },
-          {
-            id: 7,
-            img: advantage_6,
-            text: 'Оболочка EMUI 8.0 с продуманным интерфейсом обеспечивает удобство и высокую скорость работы. ' +
-              'На 10-дюймовой версии планшета в режиме десктопа работа упрощается ещё больше за счёт удобной навигации ' +
-              'и панели задач как на компьютере.'
-          }
-        ]
+        advantageList: advantages
       }
     },
+
     components: {
       AdvantagesSlider
     }

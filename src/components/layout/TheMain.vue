@@ -1,18 +1,20 @@
 <template>
   <main class="page-main">
-    <TimeManagement/>
-    <PresentationalProduct/>
+    <time-management />
+    <presentational-product />
   </main>
 </template>
 
 <script>
-  import TimeManagement from './time-management/index';
-  import PresentationalProduct from './presential-product/index';
+  import TimeManagement from '../TimeManagement';
+  import PresentationalProduct from '../PresentationalProduct';
 
   export default {
-    name: "PageMain",
+    name: "TheMain",
+
     components: {
       TimeManagement,
+
       PresentationalProduct
     }
   }
