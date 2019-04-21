@@ -1,6 +1,5 @@
 <template>
   <section class="slider">
-
     <nav class="slider__nav">
       <button type="button" class="slider__nav-toggle slider__nav-toggle_prev" v-on:click='prevSlide'>
         <svg class="slider__nav-toggle_image slider__nav-toggle_image-prev"  viewBox="0 0 26 46"><defs><path id="st66a" d="M541 211a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-27v27a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-30a1 1 0 0 1 1-1z"/></defs><g><g transform="rotate(-45 18.25 732.175)"><use  xlink:href="#st66a"/></g></g></svg>
@@ -18,15 +17,17 @@
       <ul class="slider__list" v-bind:style='{left: sliderOffsetLeft + "px"}'>
         <li class="slider__slide" v-for='slide in sliderList' :key="slide.id">
           <img class="slider__slide-image" :src="`${slide.img}`" alt="Изображение сладера">
-          <div class="slider__slide-description" v-html="`${slide.text}`"></div>
+          <div class="slider__slide-text" v-html="`${slide.text}`"></div>
         </li>
       </ul>
     </div>
   </section>
 </template>
 
-<script src="../../Slider.js">
+<script>
+  import Slider from '../../Slider';
 
+  export default new Slider();
 </script>
 
 <style lang="scss" scoped>
@@ -114,7 +115,7 @@
     margin: 0 auto;
     margin-bottom: 40px;
   }
-  .slider__slide-description {
+  .slider__slide-text {
     width: 267px;
     height: 264px;
     color: #ffffff;
@@ -132,7 +133,7 @@
     overflow: hidden;
   }
 
-  @media (min-width: $tablet-width) {
+  @media only screen and (min-width: $tablet-width) {
     .slider {
       width: $tablet-width;
       height: 311px;
@@ -145,7 +146,7 @@
       align-items: center;
       margin: 80px 115px 0 115px;
     }
-    .slider__slide-description {
+    .slider__slide-text {
       width: 440px;
       height: 154px;
       margin-left: 70px;
@@ -166,7 +167,7 @@
       left: 320px;
     }
   }
-  @media (min-width: $desktop-width) {
+  @media only screen and (min-width: $desktop-width) {
     .slider {
       width: 1280px;
       height: 341px;
@@ -178,7 +179,7 @@
       margin-left: 260px;
       margin-right: 295px;
     }
-    .slider__slide-description {
+    .slider__slide-text {
       width: 574px;
       height: 156px;
       font-size: 18px;

@@ -28,14 +28,15 @@
         </button>
       </div>
     </header>
-    <Slider
+    <AdvantagesSlider
       :sliderList="advantageList"
     />
   </article>
 
 </template>
 <script>
-  import Slider from './AdvantagesSlider'
+  import AdvantagesSlider from './AdvantagesSlider';
+
   import advantage_0 from '../../../assets/advantage_0.png';
   import advantage_1 from '../../../assets/advantage_1.png';
   import advantage_2 from '../../../assets/advantage_2.png';
@@ -103,7 +104,7 @@
       }
     },
     components: {
-      Slider
+      AdvantagesSlider
     }
   };
 </script>
@@ -154,7 +155,7 @@
   }
 
 
-  @media (min-width: $tablet-width) {
+  @media only screen and (min-width: $tablet-width) {
     .presentational-product__header {
       flex-direction: row;
       width: $tablet-width;
@@ -164,7 +165,7 @@
       margin: 0 41px;
     }
   }
-  @media (min-width: $desktop-width) {
+  @media only screen and (min-width: $desktop-width) {
     .presentational-product__header {
       width: $desktop-width;
       height: 580px;

@@ -2,7 +2,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <p class="page-footer__copyright">
-        <span class="page-footer__copyright_pink">Лайфхакер</span> | <span class="page-footer__copyright_pink">Huawei</span> © 2018
+        <a class="page-footer__copyright_pink">Лайфхакер</a> | <a class="page-footer__copyright_pink">Huawei</a> © 2018
       </p>
       <Share />
     </div>
@@ -41,6 +41,9 @@
     letter-spacing: -0.2px;
     line-height: 24px;
     margin-top: 19px;
+    &_pink {
+      cursor: pointer;
+    }
   }
   .page-footer__copyright_pink:hover {
     color: #db4696;

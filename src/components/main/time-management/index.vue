@@ -1,8 +1,11 @@
 <template>
   <article class="time-management">
     <section class="time-management__person-list">
-      <Slider
-        :sliderList="peopleList"
+      <PersonSlider
+        :sliderList="personList"
+      />
+      <PeopleList
+        :peopleList="personList"
       />
     </section>
     <section class="time-management__description">
@@ -17,48 +20,54 @@
 </template>
 
 <script>
-  import Slider from './PeopleSlider';
-  import img_1 from '../../../assets/people_1.jpg';
-  import img_2 from '../../../assets/people_1_2.png';
+  import PersonSlider from './PersonSlider';
+  import PeopleList from './PersonList';
+  import img_1 from '../../../assets/people_1-active.jpg';
+  import img_2 from '../../../assets/people_2-active.jpg';
+  import img_3 from '../../../assets/people_3-active.jpg';
+  import img_4 from '../../../assets/people_4-active.jpg';
+
+
 
   export default {
     name: 'TimeManagement',
     data() {
       return {
-        peopleList: [
+        personList: [
           {
             id: 1,
             img: img_1,
-            quote: 'Мой офис — это моя голова',
+            quote: 'Мой офис — <br/> это моя голова',
             peopleName: 'Лариса Онуфриенко',
             description: 'основатель, организатор и координатор в ASTRA MUSIC event agency'
           },
           {
             id: 2,
-            img: img_2,
-            quote: 'Мой офис — это моя голова',
-            peopleName: 'Лариса Онуфриенко',
-            description: 'основатель, организатор и координатор в ASTRA MUSIC event agency'
+            img: img_4,
+            quote: 'У меня не бывает <br/> обычных дней',
+            peopleName: 'Саша Москалец',
+            description: 'Стилист, музыкант, модель'
           },
           {
             id: 3,
-            img: img_1,
-            quote: 'Мой офис — это моя голова',
-            peopleName: 'Лариса Онуфриенко',
-            description: 'основатель, организатор и координатор в ASTRA MUSIC event agency'
+            img: img_3,
+            quote: 'Работа комментатора <br/>  — это не только <br/> рассказ о спорте',
+            peopleName: 'Павел Занозин',
+            description: 'Комментатор, ведущий'
           },
           {
             id: 4,
             img: img_2,
-            quote: 'Мой офис — это моя голова',
-            peopleName: 'Лариса Онуфриенко',
-            description: 'основатель, организатор и координатор в ASTRA MUSIC event agency'
+            quote: 'Музыка для меня — <br/> религия',
+            peopleName: 'Никита Забелин',
+            description: 'Диджей, основатель проекта Resonance'
           }
         ]
       }
     },
     components: {
-      Slider
+      PeopleList,
+      PersonSlider
     }
   };
 </script>
@@ -89,7 +98,7 @@
     line-height: 20px;
     text-align: center;
   }
-  @media (min-width: $tablet-width) {
+  @media only screen and (min-width: $tablet-width) {
     .time-management__description {
       height: 160px;
     }
@@ -97,7 +106,7 @@
       width: 459px;
     }
   }
-  @media (min-width: $desktop-width) {
+  @media only screen and (min-width: $desktop-width) {
     .time-management__description {
       height: 175px;
     }
