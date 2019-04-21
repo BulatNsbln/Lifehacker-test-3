@@ -83,7 +83,7 @@
     display: flex;
   }
   .time-management__description-title {
-    width: 221px;
+    width: 225px;
     height: 44px;
     margin: 0 auto 0 auto;
     padding: 0 0 10px 0;
