@@ -1,21 +1,16 @@
-// Fonts
+body {
+  margin: 0;
+  font-family: 'Oswald', 'Arial', 'sans-serif';
+}
 
+// Fonts
+@import "../assets/fonts/Oswald/stylesheet.css";
 
 // BASE
-$site-width: 1280px;
-$base-transition: 0.3s;
-$breakpoints: (
-	'small': 0,
-	'tablet': 768px,
-	'landscape': 1024px,
-	'large': 1280px
-);
+$tablet-width: 800px;
+$desktop-width: 1280px;
 
 // COLORS
 $color-black: #000;
 $color-white: #fff;
-$color-gray-light: #ececec;
-$color-gray: #bbb;
-$color-gray2: #333;
-$color-gray-dark: #242424;
-$color-yellow: #ffc709;
+$color-pink-near: #db4696;
