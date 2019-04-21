@@ -22,7 +22,8 @@
 
 <style lang="scss" scoped>
   .page-footer {
-    width: 320px;
+    /*width: 320px;*/
+    min-width: 320px;
     height: 137px;
     margin: 0 auto;
     background-color: #424242;
@@ -59,7 +60,8 @@
   }
   @media (min-width: $tablet-width) {
     .page-footer {
-      width: 800px;
+      /*width: 800px;*/
+      width: 100%;
       height: 103px;
     }
     .page-footer__wrapper {

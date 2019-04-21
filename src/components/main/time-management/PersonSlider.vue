@@ -29,13 +29,16 @@
 <style lang="scss" scoped>
   .slider {
     position: relative;
-    width: 320px;
+    /*width: 320px;*/
+    width: 100%;
+    min-width: 320px;
     height: 481px;
   }
   .slider__nav-wrapper {
     position: absolute;
     bottom: 20px;
-    left: 115px;
+    /*left: 115px;*/
+    left: 36%;
     z-index: 5;
   }
   .slider__nav-toggle-dot {
@@ -66,22 +69,27 @@
     }
   }
   .slider__list {
+    width: 400%;
     padding: 0;
     margin: 0;
     display: flex;
     position: relative;
     transition: all .5s ease;
-    display: flex;
   }
   .slider__container {
-    width: 320px;
+    /*width: 320px;*/
+    width: 100%;
+    min-width: 320px;
     overflow: hidden;
   }
   .slider__slide {
     list-style: none;
+    width: 100%;
   }
   .slider__slide-container {
-    width: 320px;
+    /*width: 320px;*/
+    min-width: 320px;
+    width: 100%;
     height: 481px;
     background-size: cover;
     position: relative;
@@ -93,7 +101,8 @@
     margin: 0;
     padding: 0;
     bottom: 150px;
-    margin-left: 30px;
+    /*margin-left: 30px;*/
+    margin-left: 9%;
     color: #ffffff;
     font-family: "Oswald";
     font-size: 32px;
@@ -106,7 +115,8 @@
     margin: 0;
     padding: 0;
     bottom: 120px;
-    margin-left: 30px;
+    /*margin-left: 30px;*/
+    margin-left: 9%;
     width: 164px;
     height: 19px;
     color: #ffffff;
@@ -120,43 +130,66 @@
     width: 317px;
     height: 33px;
     margin-top: 10px;
-    margin-left: 30px;
+    /*margin-left: 30px;*/
+    margin-left: 9%;
     color: #ffffff;
     font-family: Arial;
     font-size: 14px;
   }
-  @media only screen and (min-width: $tablet-width) {
+  @media (min-width: 410px) {
+    .slider__slide-container {
+      background-position-x: 0;
+    }
+    .slider__slide-quote,
+    .slider__slide-name,
+    .slider__slide-description {
+      margin-left: 40%;
+    }
+  }
+  @media (min-width: $tablet-width) {
     .slider {
-      width: $tablet-width;
+      /*width: $tablet-width;*/
+      width: 100%;
       height: 431px;
     }
     .slider__nav-wrapper {
       position: absolute;
       bottom: 23px;
-      left: 359px;
+      /*left: 359px;*/
+      left: 45%;
     }
     .slider__container {
-      width: $tablet-width;
+      /*width: $tablet-width;*/
+      width: 100%;
     }
     .slider__slide-container {
-      width: $tablet-width;
+      /*width: $tablet-width;*/
+      width: 100%;
       height: 431px;
       background-position-x: 0;
     }
     .slider__slide-quote {
       position: absolute;
-      margin-left: 485px;
+      /*margin-left: 485px;*/
+      margin-left: 61%;
       bottom: 225px;
     }
     .slider__slide-name {
       position: absolute;
-      margin-left: 485px;
+      /*margin-left: 485px;*/
+      margin-left: 61%;
       bottom: 175px;
     }
     .slider__slide-description {
       position: absolute;
-      margin-left: 485px;
+      /*margin-left: 485px;*/
+      margin-left: 61%;
       bottom: 115px;
+    }
+  }
+  @media (min-width: 950px) {
+    .slider__nav-wrapper {
+      left: 50%;
     }
   }
   @media only screen and (min-width: $desktop-width) {

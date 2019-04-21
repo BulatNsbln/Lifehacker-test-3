@@ -33,14 +33,19 @@
 <style lang="scss" scoped>
   .slider {
     position: relative;
-    width: 320px;
+    /*width: 320px;*/
+    min-width: 320px;
+    width: 100%;
     height: 528px;
     background-color: #111111;
+    display: flex;
+    justify-content: center;
   }
   .slider__nav-wrapper {
     position: absolute;
     bottom: 48px;
-    left: 80px;
+    /*left: 80px;*/
+    left: 25%;
   }
   .slider__nav-toggle {
     z-index: 1;
@@ -96,6 +101,7 @@
     transform: rotate(180deg);
   }
   .slider__list {
+    width: 700%;
     padding: 0;
     margin: 0;
     display: flex;
@@ -105,7 +111,8 @@
   .slider__slide {
     display: flex;
     flex-direction: column;
-    margin: 0 26.5px;
+    /*margin: 0 26.5px;*/
+    width: 100%;
     margin-top: 44px;
   }
   .slider__slide-image {
@@ -116,7 +123,10 @@
     margin-bottom: 40px;
   }
   .slider__slide-text {
-    width: 267px;
+    /*width: 267px;*/
+    min-width: 267px;
+    width: 83%;
+
     height: 264px;
     color: #ffffff;
     font-family: Arial;
@@ -129,25 +139,35 @@
     display: flex;
   }
   .slider__container {
-    width: 320px;
+    /*width: 320px;*/
+    min-width: 320px;
+    width: 100%;
     overflow: hidden;
   }
-
+  @media (min-width: 480px) {
+    .slider__nav-wrapper {
+      left: 40%;
+    }
+  }
   @media only screen and (min-width: $tablet-width) {
     .slider {
-      width: $tablet-width;
+      /*width: $tablet-width;*/
+      width: 100%;
       height: 311px;
     }
     .slider__container {
-      width: $tablet-width;
+      /*width: $tablet-width;*/
+      width: 100%;
     }
     .slider__slide {
       flex-direction: row;
       align-items: center;
+      /*margin: 80px 115px 0 115px;*/
       margin: 80px 115px 0 115px;
     }
     .slider__slide-text {
-      width: 440px;
+      /*width: 440px;*/
+      width: 80%;
       height: 154px;
       margin-left: 70px;
       text-align: left;
@@ -164,7 +184,8 @@
     }
     .slider__nav-wrapper {
       bottom: 44px;
-      left: 320px;
+      /*left: 320px;*/
+      left: 40%;
     }
   }
   @media only screen and (min-width: $desktop-width) {
