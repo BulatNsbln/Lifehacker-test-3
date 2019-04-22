@@ -37,7 +37,7 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .people-list {
     display: none;
   }

@@ -118,7 +118,7 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .presentational-product__header-title {
     width: 212px;
     height: 82px;
