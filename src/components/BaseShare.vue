@@ -4,7 +4,7 @@
       Поделитесь с друзьями
     </h1>
     <ul class="share__social-list">
-      <li>
+      <li :key="1">
         <a href="#">
           <svg class="share__social-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
             <defs>
@@ -18,7 +18,7 @@
           </svg>
         </a>
       </li>
-      <li>
+      <li :key="2">
         <a href="#">
           <svg class="share__social-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
             <defs>
@@ -32,7 +32,7 @@
           </svg>
         </a>
       </li>
-      <li>
+      <li :key="3">
         <a href="#">
           <svg class="share__social-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
             <defs>

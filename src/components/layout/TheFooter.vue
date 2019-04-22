@@ -1,8 +1,8 @@
 <template>
-  <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <p class="page-footer__copyright">
-        <a class="page-footer__copyright_pink">Лайфхакер</a> | <a class="page-footer__copyright_pink">Huawei</a> © 2018
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <p class="footer__copyright">
+        <a class="footer__copyright_pink">Лайфхакер</a> | <a class="footer__copyright_pink">Huawei</a> © 2018
       </p>
       <base-share />
     </div>
@@ -21,22 +21,22 @@
   }
 </script>
 
-<style lang="scss" scoped>
-  .page-footer {
+<style lang="scss">
+  .footer {
     min-width: 320px;
     height: 137px;
     margin: 0 auto;
 
     background-color: #424242;
   }
-  .page-footer__wrapper {
+  .footer__wrapper {
     display: flex;
     flex-direction: column-reverse;
 
     width: 212px;
     margin: 0 auto;
   }
-  .page-footer__copyright {
+  .footer__copyright {
     margin-top: 19px;
 
     color: $color-white;
@@ -48,7 +48,7 @@
       cursor: pointer;
     }
   }
-  .page-footer__copyright_pink:hover {
+  .footer__copyright_pink:hover {
     color: $color-pink-near;
   }
   .share {
@@ -58,15 +58,15 @@
     margin-top: 32px;
     margin-bottom: 19px;
   }
-  .page-footer__copyright {
+  .footer__copyright {
     margin: 0 auto;
   }
   @media (min-width: $tablet-width) {
-    .page-footer {
+    .footer {
       width: 100%;
       height: 103px;
     }
-    .page-footer__wrapper {
+    .footer__wrapper {
       flex-direction: row;
       justify-content: space-between;
 
@@ -77,16 +77,16 @@
       width: 160px;
       margin: auto 47px auto 0;
     }
-    .page-footer__copyright {
+    .footer__copyright {
       margin: auto 0 auto 49px;
     }
   }
   @media (min-width: $desktop-width) {
-    .page-footer {
+    .footer {
       width: 1280px;
       height: 90px;
     }
-    .page-footer__copyright {
+    .footer__copyright {
       margin-left: 94px;
     }
     .share {

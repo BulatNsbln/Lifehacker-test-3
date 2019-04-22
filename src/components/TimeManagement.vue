@@ -74,7 +74,7 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .time-management__description{
     flex-direction: column;
     justify-content: center;

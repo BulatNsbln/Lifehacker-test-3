@@ -1,5 +1,5 @@
 <template>
-  <main class="page-main">
+  <main class="main">
     <time-management />
     <presentational-product />
   </main>
@@ -21,17 +21,17 @@
 </script>
 
 <style lang="scss">
-  .page-main {
+  .main {
     min-width: 320px;
     background-color: $color-white;
   }
   @media (min-width: $tablet-width) {
-    .page-main {
+    .main {
       width: 100%;
     }
   }
   @media (min-width: $desktop-width) {
-    .page-main {
+    .main {
       width: $desktop-width;
       margin: 0 auto;
     }
