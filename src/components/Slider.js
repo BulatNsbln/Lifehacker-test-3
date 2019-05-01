@@ -1,5 +1,4 @@
-function Slider() {
-  return {
+const slider = {
     name: 'SliderItem',
 
     data () {
@@ -71,7 +70,6 @@ function Slider() {
         this.openSlide(this.sliderActive);
       })
     }
-  }
 };
 
-export default Slider;
+export default slider;

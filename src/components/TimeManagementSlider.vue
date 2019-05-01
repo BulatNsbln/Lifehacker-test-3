@@ -31,9 +31,11 @@
 </template>
 
 <script>
-  import Slider from './Slider';
+  import slider from './Slider';
 
-  export default new Slider();
+  export default {
+    mixins: [slider]
+  }
 </script>
 
 <style lang="scss" scoped>
