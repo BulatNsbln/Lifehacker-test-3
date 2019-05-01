@@ -1,12 +1,11 @@
-<template>
-  <footer class="footer">
-    <div class="footer__wrapper">
-      <p class="footer__copyright">
-        <a class="footer__copyright_pink">Лайфхакер</a> | <a class="footer__copyright_pink">Huawei</a> © 2018
-      </p>
-      <base-share />
-    </div>
-  </footer>
+<template lang="pug">
+  footer.footer
+    div.footer__wrapper
+      p.footer__copyright
+        a.footer__copyright_pink Лайфхакер |
+        a.footer__copyright_pink Huawei
+        |  © 2018
+      base-share
 </template>
 
 <script>
