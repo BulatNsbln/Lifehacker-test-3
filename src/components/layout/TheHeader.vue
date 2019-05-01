@@ -1,3 +1,4 @@
+
 <template lang="pug">
   header.header
     svg.header__logo.header__logo_lifehacker(xmlns='http://www.w3.org/2000/svg', width='153', height='28', viewBox='0 0 153 28')
@@ -8,6 +9,7 @@
       source(media="(min-width: 1280px)" srcset="../../assets/header-logo-hauwei-desktop.png")
       img(class="header__logo_huawei" src="../../assets/header-logo-huawei-mobile.png" alt="Логотип Huawei")
     base-share
+
 </template>
 
 <script>
@@ -54,7 +56,7 @@
     margin: 5px 37px;
   }
   @media (min-width: $tablet-width) {
-    .page-header {
+    .header {
       width: 100%;
       min-width: 800px;
     }

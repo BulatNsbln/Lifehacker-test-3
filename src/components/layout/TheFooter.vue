@@ -1,3 +1,4 @@
+
 <template lang="pug">
   footer.footer
     div.footer__wrapper
