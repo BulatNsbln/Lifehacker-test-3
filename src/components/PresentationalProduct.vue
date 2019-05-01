@@ -1,13 +1,12 @@
-<template>
-  <article class="presentational-product">
-    <header class="presentational-product__header">
-      <picture class="presentational-product__photo">
-        <source media="(min-width: 1280px)" srcset="../assets/tablet-photo-desktop.png">
-        <source media="(min-width: 800px)" srcset="../assets/tablet-photo-tablet.png">
-        <img src="../assets/tablet-photo-mobile.png" alt="Фотография планшета">
-      </picture>
-      <div class="presentational-product__header-wrapper">
-        <svg class="presentational-product__header-title" viewBox="0 0 212 82">
+<template lang="pug">
+  article.presentational-product
+    header.presentational-product__header
+      picture.presentational-product__photo
+        source(media="(min-width: 1280px)" srcset="../assets/tablet-photo-desktop.png")
+        source(media="(min-width: 800px)" srcset="../assets/tablet-photo-tablet.png")
+        img(src="../assets/tablet-photo-mobile.png" alt="Фотография планшета")
+      .presentational-product__header-wrapper
+        svg(class="presentational-product__header-title" viewBox="0 0 212 82")
           <defs>
             <path id="2gjab" d="M71.634 1000.145c0 2.405.754 3.404 3.309 3.404 2.548 0 3.283-1 3.283-3.404V992h3.086v8.219c0 1.742-.203 2.935-.857 3.654-1.208 1.327-2.964 1.876-5.512 1.876-2.555 0-4.325-.549-5.531-1.876-.677-.737-.842-1.932-.842-3.654V992h3.064z"/><path id="2gjac" d="M91.386 992l6.254 13.601h-3.434l-1.347-3.24h-6.375l-1.306 3.24H81.91L88.115 992zm-3.9 7.94h4.372l-2.228-5.228z"/>
             <path id="2gjad" d="M99.043 992l3.39 10.455L105.294 992h3.632l3.289 10.455 3.16-10.455h3.17l-4.537 13.601h-3.773l-3.126-10.154-2.735 10.154h-3.761L95.73 992z"/>
@@ -22,16 +21,9 @@
             </g><g clip-path="url(#2gjaf)">
             <use fill="#fefefe" xlink:href="#2gjap"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaq"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjar"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjas"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjat"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjau"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjav"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaw"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjax"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjay"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaz"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaA"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaB"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaC"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaD"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaE"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaF"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjat"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjau"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjav"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaw"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjax"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjay"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaz"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaA"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaB"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaC"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaD"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaE"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaF"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaG"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaH"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaI"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaJ"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaK"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaL"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaM"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaN"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaO"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaP"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaQ"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaR"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaS"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaT"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaU"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaV"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaW"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaX"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaY"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaZ"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaaa"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaab"/></g><g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaac"/></g>
             <g clip-path="url(#2gjaf)"><use fill="#fefefe" xlink:href="#2gjaad"/></g></g></g>
-        </svg>
-        <button type="button" class="presentational-product__header-buy">
-          <a class="presentational-product__header-buy-text">Купить</a>
-        </button>
-      </div>
-    </header>
-    <advantages-slider
-      :sliderList="advantageList"
-    />
-  </article>
+        button(type="button" class="presentational-product__header-buy")
+          a.presentational-product__header-buy-text Купить
+    advantages-slider(:sliderList="advantageList")
 </template>
 
 <script>

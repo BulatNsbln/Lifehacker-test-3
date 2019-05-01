@@ -1,40 +1,33 @@
-<template>
-  <div class="slider">
-    <nav class="slider__nav">
-      <div class="slider__nav-wrapper">
-        <button
+<template lang="pug">
+  .slider
+    nav.slider__nav
+      .slider__nav-wrapper
+        button(
           class="slider__nav-toggle-dot"
           v-for='slide in sliderList'
           @click='openSlide(slide.id)'
-        ></button>
-      </div>
-    </nav>
+        )
 
-    <div class='slider__container'>
-      <ul
+    .slider__container
+      ul(
         class="slider__list"
         :style='{left: sliderOffsetLeft + "px"}'
-      >
-        <li
+      )
+        li(
           class="slider__slide"
           v-for='slide in sliderList'
           :key="slide.id"
-        >
-          <div
+        )
+          div(
             class="slider__slide-container"
             :style='"background-image: url(" + slide.img + ")"'
-          >
-            <h1
+          )
+            h1(
               class="slider__slide-quote"
               v-html="slide.quote"
-            ></h1>
-            <h5 class="slider__slide-name">{{slide.peopleName}}</h5>
-            <p class="slider__slide-description">{{slide.description}}</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+            )
+            h5.slider__slide-name {{slide.peopleName}}
+            p.slider__slide-description {{slide.description}}
 </template>
 
 <script>

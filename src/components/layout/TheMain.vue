@@ -1,7 +1,7 @@
-<template>
-  <main class="main">
-    <time-management />
-    <presentational-product />
+<template lang="pug">
+  main.main
+    time-management
+    presentational-product
   </main>
 </template>
 

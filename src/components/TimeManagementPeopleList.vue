@@ -1,27 +1,17 @@
-<template>
-  <ul class="people-list">
-    <li
+<template lang="pug">
+  ul.people-list
+    li(
       class="people-item"
       v-for="people in peopleList"
       :key="people.id"
-    >
-      <div
-        class="people-item__wrapper"
-        v-bind:style='"background-image: url(" + people.img + ")"'
-      >
-        <h1
+    )
+      .people-item__wrapper(v-bind:style='"background-image: url(" + people.img + ")"')
+        h1(
           class="people-item__quote"
           v-html="people.quote"
-        ></h1>
-        <h5 class="people-item__name">
-          {{people.peopleName}}
-        </h5>
-        <p class="people-item__description">
-          {{people.description}}
-        </p>
-      </div>
-    </li>
-  </ul>
+        )
+        h5.people-item__name {{people.peopleName}}
+        p.people-item__description {{people.description}}
 </template>
 
 <script>

@@ -1,22 +1,11 @@
-<template>
-  <article class="time-management">
-    <section class="time-management__person-list">
-      <person-slider
-        :sliderList="personList"
-      />
-      <people-list
-        :peopleList="personList"
-      />
-    </section>
-    <section class="time-management__description">
-      <h1 class="time-management__description-title">
-        Повелители времени
-      </h1>
-      <p class="time-management__description-text">
-        Как управлять своим временем и что им в этом помогает рассказывают люди четырех профессий
-      </p>
-    </section>
-  </article>
+<template lang="pug">
+  article.time-management
+    section.time-management__person-list
+      person-slider(:sliderList="personList")
+      people-list(:peopleList="personList")
+    section.time-management__description
+      h1.time-management__description-title Повелители времени
+      p.time-management__description-text Как управлять своим временем и что им в этом помогает рассказывают люди четырех профессий
 </template>
 
 <script>
